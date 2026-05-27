@@ -35,7 +35,7 @@ public class CreatePackageScreen extends Application {
         brand.setStyle("-fx-text-fill: #FFFFFF; -fx-font-size: 16px; -fx-font-weight: bold;");
         brand.setPadding(new Insets(28, 24, 28, 24));
 
-        String[] navItems = {"Create Package", "Package List", "View Details"};
+        String[] navItems = {"Create Package", "Package List"};
         VBox navList = new VBox(2);
         navList.setPadding(new Insets(0, 12, 0, 12));
 

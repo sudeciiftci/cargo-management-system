@@ -107,6 +107,13 @@ public class PackageListScreen {
         });
         deliveryCol.setStyle("-fx-alignment: CENTER;");
 
+        table.setOnMouseClicked(e -> {
+            Package selected = table.getSelectionModel().getSelectedItem();
+            if (selected != null) {
+                new PackageDetailScreen(packageService, selected).show(stage);
+            }
+        });
+
         table.getColumns().addAll(trackingCol, typeCol, senderCol, receiverCol, priceCol, deliveryCol);
         table.getItems().addAll(packageService.getAllPackages());
 
