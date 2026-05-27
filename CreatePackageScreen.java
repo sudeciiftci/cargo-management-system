@@ -8,7 +8,11 @@ import javafx.stage.Stage;
 
 public class CreatePackageScreen extends Application {
 
-    private final PackageService packageService = new PackageService();
+    private PackageService packageService;
+
+    public CreatePackageScreen(PackageService packageService) {
+        this.packageService = packageService;
+    }
 
     private TextField senderField;
     private TextField receiverField;
@@ -43,6 +47,14 @@ public class CreatePackageScreen extends Application {
             nav.setStyle(active
                     ? "-fx-background-color: #2E2D29; -fx-text-fill: #FFFFFF; -fx-font-size: 13px; -fx-background-radius: 8;"
                     : "-fx-text-fill: #888780; -fx-font-size: 13px; -fx-background-radius: 8;");
+
+            if (i == 1) {
+                nav.setOnMouseClicked(e -> {
+                    Stage listStage = new Stage();
+                    new PackageListScreen(packageService).show(listStage);
+                });
+            }
+
             navList.getChildren().add(nav);
         }
 

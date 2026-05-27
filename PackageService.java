@@ -38,4 +38,9 @@ public class PackageService {
 
         return true;
     }
+
+    public ArrayList<Package> getAllPackages(){
+        return list;
+    }
+
 }

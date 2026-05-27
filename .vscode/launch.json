@@ -1,12 +1,21 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Launch CreatePackageScreen",
-            "request": "launch",
-            "mainClass": "CreatePackageScreen",
-            "vmArgs": "--module-path /Users/sudelide/Desktop/javafx-sdk-26.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.graphics"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run Main (JavaFX)",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "cargo-management-system_639d9dd",
+      "vmArgs": "--module-path /Users/sudelide/Desktop/javafx-sdk-26.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Run CreatePackageScreen",
+      "request": "launch",
+      "mainClass": "CreatePackageScreen",
+      "projectName": "cargo-management-system_639d9dd",
+      "vmArgs": "--module-path /Users/sudelide/Desktop/javafx-sdk-26.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.graphics"
+    }
+  ]
 }
